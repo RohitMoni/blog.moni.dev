@@ -1,11 +1,6 @@
 #!/bin/bash
 #
 # Deploy the content of _site to 'origin/<pages_branch>'
-#
-# v2.5
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2020 Cotes Chung
-# Published under MIT License
 
 set -eu
 
@@ -38,7 +33,7 @@ backup() {
   mv .git "$_backup_dir"
 
   # When adding custom domain from Github website,
-  # the CNAME only exist on `gh-pages` branch
+  # the CNAME only exist on `publish` branch
   if [[ -f CNAME ]]; then
     mv CNAME "$_backup_dir"
   fi
