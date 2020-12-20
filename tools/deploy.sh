@@ -9,7 +9,7 @@
 
 set -eu
 
-PAGES_BRANCH="gh-pages"
+PAGES_BRANCH="publish"
 
 _no_branch=false
 _backup_dir="$(mktemp -d)"
@@ -38,7 +38,7 @@ backup() {
   mv .git "$_backup_dir"
 
   # When adding custom domain from Github website,
-  # the CANME only exist on `gh-pages` branch
+  # the CNAME only exist on `gh-pages` branch
   if [[ -f CNAME ]]; then
     mv CNAME "$_backup_dir"
   fi
