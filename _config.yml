@@ -3,9 +3,9 @@
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Blog.Moni.Dev                          # the main title
+title: RM                          # the main title
 
-tagline: My personal blog  # it will display as the sub-title
+tagline: Senior software developer at Unity. Blogging about tech, software development and more...  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Blogging about whatever I want to blog about
