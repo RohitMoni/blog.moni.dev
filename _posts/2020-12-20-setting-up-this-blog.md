@@ -3,8 +3,6 @@ layout: post
 title: Setting up this blog
 ---
 
-# Setting up this blog
-
 Blogging is an interesting phenomenon. To some extent, I've always known it's important to try and blog (get your name out and all that), but I've never been able to keep it regular; For some reason it's always seemed like too much effort.
 
 Recently, I've seen more blogs on places like reddit that are super simple. Short posts, to the point, not much fluff. They're mostly text too, but are formatted nicely so they display well on mobile as well as on desktop. It's nice: I can read a short, interesting post on my phone while using the bathroom or right before bed. This really appealed to me because it seemed simpler and easier.
