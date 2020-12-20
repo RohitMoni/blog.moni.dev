@@ -16,6 +16,9 @@ description: >-                        # used by seo meta and the atom feed
   bootstrap Jekyll theme with responsive web design
   and focuses on text presentation.
 
+# Debug
+host: 0.0.0.0
+
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
 url: 'https://blog.moni.dev'
 
