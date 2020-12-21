@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Setting up this blog
+date: 2020-12-20 12:33:00 EST
+last_modified_at: 2020-12-20 13:45:00 EST
 ---
 
 Blogging is an interesting phenomenon. To some extent, I've always known it's important to try and blog (get your name out and all that), but I've never been able to keep it regular; For some reason it's always seemed like too much effort.
