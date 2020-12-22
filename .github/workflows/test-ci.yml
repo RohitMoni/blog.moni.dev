@@ -19,5 +19,4 @@ jobs:
 
       - name: MyTestFunc
         run: |
-          echo $PWD
-          ls
+          ./tools/test_post_dates.sh
