@@ -22,6 +22,11 @@ jobs:
         with:
           fetch-depth: 0  # for posts's lastmod
 
+      - name: MyTestFunc
+        run: |
+          echo $PWD
+          ls
+
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
         with:
