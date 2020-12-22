@@ -1,0 +1,23 @@
+name: 'Test CI'
+on:
+  push:
+    branches:
+      - test-ci
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+
+jobs:
+  my-test-ci-job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: MyTestFunc
+        run: |
+          echo $PWD
+          ls
