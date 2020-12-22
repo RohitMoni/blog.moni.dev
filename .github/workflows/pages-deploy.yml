@@ -20,6 +20,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Test Post Dates
+        run: |
+          ./tools/test_post_dates.sh
+
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
         with:
