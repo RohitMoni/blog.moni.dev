@@ -1,8 +1,8 @@
 ---
 layout: post
+date: 2020-12-29 13:57:00 EST
 title: "Stock Options and Me"
 tags: stock options finance money taxes
-date: 2020-12-29 13:57:00 EST
 last_modified_at: 2020-12-29 14:10:00 EST
 ---
 

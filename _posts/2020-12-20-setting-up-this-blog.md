@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting up this blog
 date: 2020-12-20 12:33:00 EST
+title: "Setting Up This Blog"
 last_modified_at: 2020-12-20 13:45:00 EST
 ---
 

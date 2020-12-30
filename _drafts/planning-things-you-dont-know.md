@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Planning: Things you don't know"
+title: "Planning: Things You Don't Know"
 ---
 
 There's this phrase of "There are known knowns" from Donald Rumsfeld and the statement that followed it, but I like to re-phrase the concept into:

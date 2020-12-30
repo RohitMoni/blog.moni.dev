@@ -7,6 +7,11 @@ $(function() {
   var DEFAULT = $("#topbar-title").text().trim();
   var title = ($("div.post>h1").length > 0) ?
           $("div.post>h1").text().trim() : $("h1").text().trim();
+  
+  // Minor hack to fix post titles on mobile
+  if (DEFAULT == "Post") {
+    DEFAULT = title;
+  }
 
   if ($("#page-category").length || $("#page-tag").length) {
     /* The title in Category or Tag page will be "<title> <count_of_posts>" */
