@@ -2,7 +2,9 @@
 layout: post
 date: 2020-12-20 12:33:00 EST
 title: "Setting Up This Blog"
+tags: dev blog jekyll github-pages
 last_modified_at: 2020-12-20 13:45:00 EST
+permalink: /:title
 ---
 
 Blogging is an interesting phenomenon. To some extent, I've always known it's important to try and blog (get your name out and all that), but I've never been able to keep it regular; For some reason it's always seemed like too much effort.
