@@ -4,7 +4,6 @@ date: 2020-12-29 13:57:00 EST
 title: "Stock Options and Me"
 tags: stock options finance money taxes
 last_modified_at: 2020-12-29 14:10:00 EST
-permalink: /:title
 ---
 
 I'm an employee of a (now) public company and I have stock options (like many other people). I was thinking one day about what I should do to maximise my gain from those options and realised something interesting.
