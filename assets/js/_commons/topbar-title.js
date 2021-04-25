@@ -11,6 +11,7 @@ $(function() {
   /* Minor hack to fix post titles on mobile */
   if (DEFAULT == "Post") {
     DEFAULT = title;
+    $("#topbar-title").text(DEFAULT);
   }
 
   if ($("#page-category").length || $("#page-tag").length) {
