@@ -9,7 +9,7 @@ last_modified_at: 2021-04-25 00:44:00 EST
 What do you care about when it comes to versions? I can think of a few from examples of software versioning I've seen in the products and tools I use. I've come up with my own short-hand terms for each requirement so I can refer to them easier later on. I've also provided examples.
 
 ### Chronology
-You want to be able to tell when one version is newer or older than another .
+You want to be able to tell when one version is newer or older than another.
 
 ```
 Ex: Windows 10 is newer than Windows 7
@@ -17,7 +17,7 @@ Non-ex: macOS "Big Sur" and "Snow Leopard", which one is newer?
 ```
 
 ### Out-of-date-ness
-You want to be able to tell how old a version is / how potentially out of date it is .
+You want to be able to tell how old a version is / how potentially out of date it is.
 
 ```
 Ex: PyCharm 2017 is X years old from todays date
@@ -28,7 +28,7 @@ Non-ex: How old is Python 2?
 You want to be able to tell if a version impacts one or more workflows in a major way.
 
 ```
-Ex: Angular 3 was a complete overhaul from Angular 2
+Ex: Angular 3 was a complete overhaul from Angular 2. This might be a bad example because many people consider them to almost be separate products with the same name because of how different they are
 Non-ex: Lots of projects that work with Visual Studio 2017 will work with Visual Studio 2019
 ```
 
@@ -52,16 +52,16 @@ Non-ex: How long will Unreal Engine 4 be supported?
 You want to be able to have the same behaviour when using the same version.
 
 ```
-Ex: Git commits and their hashes are exact snapshots of the entire codebase.
-Non-ex: Some security flaw in an older version of Ubuntu's current LTS has probably been fixed in a patch, so just installing the LTS version will not guarantee reproducability.
+Ex: Git commits and their hashes are exact snapshots of the entire codebase
+Non-ex: Some security flaw in an older version of Ubuntu's current LTS has probably been fixed in a patch, so just installing the LTS version will not guarantee reproducability
 ```
 
 ### Marketability
 This is mostly about how you can use marketing to differentiate product versions in the minds of your users. Mostly uses real words to create relations.
 
 ```
-Ex: Windows 10 Professional vs Windows 10 Home. Visual Studio Enterprise vs Community. 
-Non-ex: Python 2 vs 3. 
+Ex: Windows 10 Professional vs Windows 10 Home. Visual Studio Enterprise vs Community
+Non-ex: Python 2 vs 3
 ```
 
 ### Brandability
@@ -80,6 +80,6 @@ Ex: Android versions have codenames like KitKat and Jelly Bean
 Non-ex: Google Chrome's version number is something like 90.0.4430.85, which takes a while to say and doesn't easily distinguish it from other versions
 ```
 
-I realise now that this post has gotten quite large, so I'm going to call this a Part 1 and talk about some more specific versioning thoughts in a Part 2 later.
+I realise now that this post has gotten quite large, so I'm going to call this a Part 1 and talk about which of these requirements might matter for you next time. Spoiler Alert: It depends, but I'll try to think of a few different cases.
 
 For now: What do you think about these requirements? Are there any other things you might think about when trying to label a version of your software? Anything that would be nice that no one does?
