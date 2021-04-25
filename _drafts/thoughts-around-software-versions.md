@@ -6,7 +6,7 @@ tags: software development product version thoughts
 last_modified_at: 2021-04-25 00:44:00 EST
 ---
 
-What do you care about when it comes to versions? Big surprise: It depends. Let's define some needs that you might have first. I've come up with my own short-hand terms for each of them so I can refer to them easier later on, bear with me. I've also provided examples.
+What do you care about when it comes to versions? I can think of a few from examples of software versioning I've seen in the products and tools I use. I've come up with my own short-hand terms for each requirement so I can refer to them easier later on. I've also provided examples.
 
 ### Chronology
 You want to be able to tell when one version is newer or older than another .
@@ -56,5 +56,6 @@ Ex: Git commits and their hashes are exact snapshots of the entire codebase.
 Non-ex: Some security flaw in an older version of Ubuntu's current LTS has probably been fixed in a patch, so just installing the LTS version will not guarantee reproducability.
 ```
 
-If you're a software library and you ship a public API to other developers:
-1. You want users of your library to know a newer version from an olde
+I realise now that this post has gotten quite large, so I'm going to call this a Part 1 and talk about some more specific versioning thoughts in a Part 2 later.
+
+For now: What do you think about these requirements? Are there any other things you might think about when trying to label a version of your software? Anything that would be nice that no one does?
