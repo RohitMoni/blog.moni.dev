@@ -8,7 +8,7 @@ $(function() {
   var title = ($("div.post>h1").length > 0) ?
           $("div.post>h1").text().trim() : $("h1").text().trim();
   
-  // Minor hack to fix post titles on mobile
+  /* Minor hack to fix post titles on mobile */
   if (DEFAULT == "Post") {
     DEFAULT = title;
   }
