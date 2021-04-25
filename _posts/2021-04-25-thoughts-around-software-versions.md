@@ -3,7 +3,7 @@ layout: post
 date: 2021-04-25 00:44:00 EST
 title: "Thoughts Around Software Versions"
 tags: software development product version thoughts
-last_modified_at: 2021-04-25 00:44:00 EST
+last_modified_at: 2021-04-25 11:22:00 EST
 ---
 
 What do you care about when it comes to versions? I can think of a few from examples of software versioning I've seen in the products and tools I use. I've come up with my own short-hand terms for each requirement so I can refer to them easier later on. I've also provided examples.
