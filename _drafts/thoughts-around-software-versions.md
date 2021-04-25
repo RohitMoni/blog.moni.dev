@@ -29,10 +29,10 @@ You want to be able to tell if a version impacts one or more workflows in a majo
 
 ```
 Ex: Angular 3 was a complete overhaul from Angular 2
-Non-ex: Lots of projects that work with Visual Studio 2017 will work with Visual Studio 2019 
+Non-ex: Lots of projects that work with Visual Studio 2017 will work with Visual Studio 2019
 ```
 
-### Semantic Impact
+### Riskiness
 You want to be able to tell if a version breaks your code and by how much.
 
 ```
@@ -40,7 +40,7 @@ Ex: Semantic versioning or semver (major.minor.patch) tries to express this for 
 Non-ex: I have a project in Unity 2019. Will it work if I open it in Unity 2020? (hint: It might, it might not)
 ```
 
-### Support Guarantees
+### Supportedness
 You want to be able to tell if a version will be supported and for how long.
 
 ```
@@ -54,6 +54,21 @@ You want to be able to have the same behaviour when using the same version.
 ```
 Ex: Git commits and their hashes are exact snapshots of the entire codebase.
 Non-ex: Some security flaw in an older version of Ubuntu's current LTS has probably been fixed in a patch, so just installing the LTS version will not guarantee reproducability.
+```
+
+### Marketability
+This is mostly about how you can use marketing to differentiate product versions in the minds of your users. Mostly uses real words to create relations.
+
+```
+Ex: Windows 10 Professional vs Windows 10 Home. Visual Studio Enterprise vs Community. 
+Non-ex: Python 2 vs 3. 
+```
+
+## Brandability
+This is similar to marketability but can be used to either utilize existing positive brand value or separate yourself from existing negative brand value.
+```
+Ex: Backrub became Google. Cadabra became Amazon.
+Non-ex: Windows 7, 8, 10. Which ones are good / bad / great?
 ```
 
 I realise now that this post has gotten quite large, so I'm going to call this a Part 1 and talk about some more specific versioning thoughts in a Part 2 later.
