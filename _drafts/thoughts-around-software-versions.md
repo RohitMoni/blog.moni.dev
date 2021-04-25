@@ -67,7 +67,7 @@ Non-ex: Python 2 vs 3.
 ## Brandability
 This is similar to marketability but can be used to either utilize existing positive brand value or separate yourself from existing negative brand value.
 ```
-Ex: Backrub became Google. Cadabra became Amazon.
+Ex: Internet Explorer became Microsoft Edge to try and separate itself from its previous bad reputation
 Non-ex: Windows 7, 8, 10. Which ones are good / bad / great?
 ```
 
