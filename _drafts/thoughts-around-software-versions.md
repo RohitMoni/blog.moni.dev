@@ -64,11 +64,20 @@ Ex: Windows 10 Professional vs Windows 10 Home. Visual Studio Enterprise vs Comm
 Non-ex: Python 2 vs 3. 
 ```
 
-## Brandability
+### Brandability
 This is similar to marketability but can be used to either utilize existing positive brand value or separate yourself from existing negative brand value.
+
 ```
 Ex: Internet Explorer became Microsoft Edge to try and separate itself from its previous bad reputation
 Non-ex: Windows 7, 8, 10. Which ones are good / bad / great?
+```
+
+### Readability / Expressiveness
+This is how easy it is to share a version with another person or understand a version yourself, recognizing it as distinct from other versions.
+
+```
+Ex: Android versions have codenames like KitKat and Jelly Bean
+Non-ex: Google Chrome's version number is something like 90.0.4430.85, which takes a while to say and doesn't easily distinguish it from other versions
 ```
 
 I realise now that this post has gotten quite large, so I'm going to call this a Part 1 and talk about some more specific versioning thoughts in a Part 2 later.
