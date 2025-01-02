@@ -1,7 +1,4 @@
-# hidden files
-.*
-!.github
-
-# jekyll cache
-_site
-vendor
+_site/
+node_modules/
+package-lock.json
+.cache
