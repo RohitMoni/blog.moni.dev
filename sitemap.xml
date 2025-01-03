@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://blog.moni.dev/eleventy-base-blog/blog/1-blogging-again/</loc>
+		<loc>https://blog.moni.dev/blog.moni.dev/blog/1-blogging-again/</loc>
 		<lastmod>2025-01-02</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://blog.moni.dev/eleventy-base-blog/about/</loc>
+		<loc>https://blog.moni.dev/blog.moni.dev/about/</loc>
 		<lastmod>2025-01-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://blog.moni.dev/eleventy-base-blog/blog/</loc>
+		<loc>https://blog.moni.dev/blog.moni.dev/blog/</loc>
 		<lastmod>2025-01-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://blog.moni.dev/eleventy-base-blog/</loc>
+		<loc>https://blog.moni.dev/blog.moni.dev/</loc>
 		<lastmod>2025-01-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://blog.moni.dev/eleventy-base-blog/tags/</loc>
+		<loc>https://blog.moni.dev/blog.moni.dev/tags/</loc>
 		<lastmod>2025-01-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://blog.moni.dev/eleventy-base-blog/feed/feed.xml</loc>
+		<loc>https://blog.moni.dev/blog.moni.dev/feed/feed.xml</loc>
 		<lastmod>2025-01-03</lastmod>
 	</url>
 </urlset>

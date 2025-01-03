@@ -3,18 +3,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Blog Title</title>
   <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/eleventy-base-blog/feed/feed.xml" rel="self" />
-  <link href="https://example.com/eleventy-base-blog/" />
+  <link href="https://example.com/blog.moni.dev/feed/feed.xml" rel="self" />
+  <link href="https://example.com/blog.moni.dev/" />
   <updated>2025-01-02T00:00:00Z</updated>
-  <id>https://example.com/eleventy-base-blog/</id>
+  <id>https://example.com/blog.moni.dev/</id>
   <author>
     <name>Your Name</name>
   </author>
   <entry>
     <title>Blogging again</title>
-    <link href="https://example.com/eleventy-base-blog/blog/1-blogging-again/" />
+    <link href="https://example.com/blog.moni.dev/blog/1-blogging-again/" />
     <updated>2025-01-02T00:00:00Z</updated>
-    <id>https://example.com/eleventy-base-blog/blog/1-blogging-again/</id>
+    <id>https://example.com/blog.moni.dev/blog/1-blogging-again/</id>
     <content type="html">&lt;p&gt;I&#39;ve started blogs a few different times and have shut them all down. As they say, if at first you don&#39;t succeed, try, try again.&lt;/p&gt;
 &lt;p&gt;I think that I&#39;ll do better this time. I have lots to think about and writing is probably the best way to really organize and concretize my thoughts.&lt;/p&gt;
 &lt;p&gt;Blogging is also something I think I&#39;d be interested in doing when I&#39;m bored. Will write about why I&#39;m probably going to be bored a lot as another post.&lt;/p&gt;
