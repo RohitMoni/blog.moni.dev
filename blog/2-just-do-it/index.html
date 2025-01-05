@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Just Do It</title>
+		<meta name="description" content="Writing about software dev, finance, psychology and more">
+		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Rohit&#39;s Dev Blog">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Rohit&#39;s Dev Blog</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="just-do-it">Just Do It</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-01-04">04 January 2025</time></li>
+	<li><a href="/tags/psychology/" class="post-tag">psychology</a></li>
+</ul>
+
+<p>I've always found it really difficult to do some things; Things like going to the gym consistently, or working on side projects, or writing blog posts.</p>
+<p>What's weird to me is that I don't do these things even though I consciously know that they would be valuable to me. They'd be interesting, or result in fun outcomes, or make me a better person. I <em>want</em> to do these things, but I still don't do them. Isn't that odd? I always attributed it to being lazy; &quot;It's just hard&quot;, I'd say. &quot;I'm just not working hard enough&quot;, I'll tell myself.</p>
+<p>The really weird thing though, is that <em>I know I can do hard things</em>. I've worked hard at my career and done things that were difficult both in my professional and personal life. I've done it enough that I'm relatively unstressed by the prospect of 'hard' things; I know I'll figure it out.</p>
+<p>So what makes some hard things 'easy' and other hard things 'hard'?</p>
+<h3 id="intrinsic-vs-extrinsic-motivation">Intrinsic vs Extrinsic Motivation</h3>
+<p>There's a concept in psychology around intrinsic vs extrinsic motivation: where you're motivated from within (intrinsic) or from your environment, circumstances, society, other people, etc (extrinsic). It's a pretty fascinating concept with lots of interesting studies around it.</p>
+<p>But going back to the idea of 'hard' things: I've come to a few realizations.</p>
+<p>All the 'hard hard' things (hard things that I find hard to do) involve long term goals with delayed rewards. They often involve consistently working on something day-in and day-out even when things get tough or slow or life gets in the way.</p>
+<p>But I've done <em>some</em> long term things, so what's different here?</p>
+<p>The main difference I can think of is the idea around being extrinsically vs intrinsically motivated. All the long term hard things I've done, I've always had external factors strongly motivating me to keep going. Even the one scenario I can think of where the goal was self motivated (I wanted to become a more outgoing, social person) my solution effectively put me in situations where I <em>had</em> to do so, sink or swim (I signed up to be a Resident Advisor at my university dorm).</p>
+<p>Putting yourself in situations where you either succeed or face negative consequences is definitely one way to give yourself the motivation you need. Maybe you sign up for that marathon 6 months away even though you barely run right now (you've paid for it, if you don't run you'd lose that money). Maybe you blast your goals on social media so that failing would be embarrassing. Sometimes this can work, but it also feels a little icky to me: almost like holding yourself at gunpoint and threatening your inner psyche with a bullet if you fail.</p>
+<p>It also doesn't work for <em>every</em> situation: quitting your job and draining your savings so that you're 'forced' to succeed at starting a business or you starve can be... not the best idea. I want to be able to solve for the 'hard hard' things in a different way, I need to figure out how to intrinsically motivate myself over the long term.</p>
+<h3 id="dopamine-the-motivator">Dopamine The Motivator</h3>
+<p>I think dopamine is pretty misunderstood: lots of people have heard about getting dopamine from social media, how it's dangerous, how it's a 'feel good' chemical that will rot your brain.</p>
+<p>My current understanding of dopamine is similar, but also different. dopamine isn't 'feel good', it's more like 'satisfaction'. It's almost fulfillment (but it's really not). It drives you to do more of the same thing. Critically: you can get dopamine and be motivated to do something that <em>doesn't</em> feel good. I've experienced this myself with video games: being motivated to log on and play even though I'm not having fun anymore. dopamine will trigger your brain to want to do that thing again even through difficulty or stress. In some ways, it <em>is</em> intrinsic motivation.</p>
+<h3 id="dopamine-the-danger">Dopamine The Danger</h3>
+<p>There are two other aspects of dopamine that are then interesting to note.</p>
+<p>The first is that dopamine is like any other neuro-transmitter; it's regulated by your brain to be received relative to how much you get. Have a lot and your brain will down-regulate your receivers to be less sensitive. Have too little and you'll up-regulate to be more sensitive to it. This is most well known and studied with caffeine: if you drink coffee regularly you start needing more and more caffeine to get the same effect. You can 'reset' your caffeine tolerance by not taking any caffeine for a 2-3 weeks.</p>
+<p>This makes some parts of modern life more dangerous than they might seem, at least when unregulated. Social media, video games, apps, etc are driven by an engagement economy: eyeballs and time spent = revenue. And what's the best way to drive users to stick with you? dopamine. They've gotten really good at it too, but (as far as I know) it's not super well understood. How much dopamine does swiping TikTok give you? What about opening a loot box in a video game? One thing for sure though is that it's way more dopamine than most of us are used to, historically. Having that much dopamine fed to us down-regulates our receptors, it makes other dopamine drivers (taking walks, exercising, being social, etc) feel like nothing in comparison.</p>
+<p>The second aspect of dopamine that I currently believe, but I'm not 100% sure about, is that your internal body has a certain amount of dopamine that recovers at some rate, but it can be depleted. Parkinsons is linked to clinically low levels of dopamine. Even ignoring clinical issues like brain damage, depleting your dopamine would mean you're less motivated to do the things that normally make you 'feel good'; there's just no motivation to because you don't get the dopamine you normally would. I've heard it likened to squeezing a lime: when you're fresh a gentle squeeze gets you a lot of juice, but when you're wrung out you need to squeeze really hard for practically nothing.</p>
+<p>This is a double-whammy for the parts of modern life we were talking about before. Not only are they flooding us with so much dopamine that we get less sensitive to it (and thus need stronger sources of dopamine to feel the same motivation), but they also drain our dopamine, making things feel kinda meh for the rest of the day.</p>
+<h3 id="dopamine-recomp-detox-but-better">Dopamine Recomp (Detox but better!)</h3>
+<p>All of the stuff above kinda leads to the conclusion that we need to shut that stuff down. There's a bit of a trend in social media going on around 'dopamine detoxing' that follows that thought, but I'd caution against some of the stuff being thrown around. Dopamine is still very necessary to function: there was an experiment done where dopamine deficient rats starved to death because they just didn't eat enough.</p>
+<p>Having said that, I came across a really interesting thought (from some podcast) that you want to be careful about where you get your dopamine from. This really resonated with me.</p>
+<h3 id="the-plan">The Plan</h3>
+<p>So starting 2025, I'm doing what I call a dopamine recomp (recomposition), but asking myself a few questions and trying to adjust where I get my dopamine from:</p>
+<ol>
+<li>Where do I get my dopamine from right now?</li>
+</ol>
+<p>Figure out what my sources are look at my life with a critical eye. For me this is doom-scrolling Reddit and Instagram or Youtube shorts. Maybe a few other things.</p>
+<ol start="2">
+<li>What do I want to keep?</li>
+</ol>
+<p>I think some things are good to have / keep: like playing certain video games to keep up with remote friends, or watching interesting educational YouTube content, or posting and keeping up to date with friends on Instagram. This also results in what I want to <em>not</em> do. This has led me to find ways to try and make those things harder to do, like putting limits on certain app times (thanks Apple).</p>
+<ol start="3">
+<li>What do I do when I'm bored?</li>
+</ol>
+<p>Being bored is a trap that could make me relapse a little, so I need to figure out what I could do instead. Maybe go to the gym, or take a walk, or sing, or write a blog post. For what it's worth: I've heard that it's good to give yourself the space to be bored (and I agree with that), but the bored mind-space is something I'm wary of when it comes to lapsing into past behaviors.</p>
+<hr>
+<p>I'm going to try and to do this for the next month, or two, or three and see where it gets me. There are a lot of other things that help drive us to do the things we want to do, but I'm curious about the impact this will have.</p>
+<p>If you relate, give it a try too, and maybe in a few months we can both &quot;just do it&quot;.</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/1-blogging-again/">Blogging again</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+		</footer>
+
+		<!-- This page `/blog/2-just-do-it/` was built on 2025-01-05T04:45:26.213Z -->
+		<script type="module" src="/dist/rJ3_G-2ArF.js"></script>
+	</body>
+</html>
